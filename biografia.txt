@@ -1,1 +1,2 @@
-Un archivo de texto plano, que se ha modificado.
+ Un archivo de texto plano, que se ha modificado, nuevamente. Ahora vamos
+a probar el comando git reset head.
