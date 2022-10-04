@@ -1,1 +1,1 @@
-Un archivo de texto plano
+Un archivo de texto plano, que se ha modificado.
