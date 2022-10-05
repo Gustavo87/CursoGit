@@ -1,3 +1,10 @@
+//Recursos utiles/urls
+https://learngitbranching.js.org/
+https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+https://github.com/settings/repositories
+
+
+
 -- Comandos GIT <Repositorio Local> --
 //Crear el Staging y Repositorio Local.
 git init
