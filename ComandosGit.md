@@ -95,12 +95,12 @@ git checkout nombre_rama
 ```
 git branch
 ```
-*Unir ramas
-* 1.Nos movemos a la rama master.
+* Unir ramas
+* Primeramente, nos movemos a la rama master.
 ```
 git checkout master
 ```
-* 2. Hacemos el merge.
+* Luego, hacemos el merge.
 ```
 git merge nombre_rama
 ```
@@ -116,12 +116,12 @@ ssh-keygen -t rsa -b 4096 -C un_correo
 ```
 eval $(ssh-agent -s)
 ```
-* Agregar la llave privada al servidor de llaves del os.
+* Agregar la llave privada al servidor de llaves del Sistema Operativo.
 ```
 ssh-add ruta_llave_privada
 ```
 * Copiamos la llave publica a GitHub
-* Cambiamos la url del repo para usar ssh en lugar de https
+* Cambiamos la url del repo para usar `ssh` en lugar de `https`
 * Para ver la url actual
 ```
 git remote -v
@@ -134,4 +134,8 @@ git remote set-url origin git@github.com:Gustavo87/CursoGit.git
 * Primeramente, nos traemos todo del repo de GitHub
 ```
 git pull origin master
+```
+* Luego, podemos subir los cambios que tenemos en el repositorio local al repositorio remoto.
+```
+git push origin master
 ```
