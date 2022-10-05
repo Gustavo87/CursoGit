@@ -23,8 +23,8 @@ git commit
 ```
 git clone url
 ```
-* Seguimos usando git add para mover a staging
-* Seguimos usando git commit para mover de staging al repo local
+* Seguimos usando `git add` para mover a staging
+* Seguimos usando `git commit` para mover de staging al repositorio local
 * Cuando queremos mandar los cambios al directorio remoto.
 ```
 git push
@@ -33,13 +33,14 @@ git push
 ```
 git fetch 
 ```
-* git fetch. Trae la actualizacion a mi repositorio local, pero no lo copia a mi directorio de trabajo. Para esto ultimo debemos hacer
+* `git fetch`. Trae la actualizacion a mi repositorio local, pero no lo copia a mi directorio de trabajo. Para esto ultimo debemos hacer
 ```
 git merge
 ```
 * Hay un comando que hace estas dos cosas.
+```
 git pull
-
+```
 * Agregar un origen remoto
 ```
 git remote add origin https://github.com/Gustavo87/CursoGit.git
