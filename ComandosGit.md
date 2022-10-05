@@ -1,11 +1,11 @@
 # Recursos utiles/urls
-https://learngitbranching.js.org/
-https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
-https://github.com/settings/repositories
+* https://learngitbranching.js.org/
+* https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+* https://github.com/settings/repositories
 
 
 
-# Comandos GIT <Repositorio Local> 
+# Comandos GIT para trabajar con el Repositorio Local
 * Crear el Staging y Repositorio Local. 
 ```
 git init
@@ -18,7 +18,7 @@ git add archivo
 ```
 git commit
 ```
-# Comandos GIT <Repositorio Remoto> 
+# Comandos GIT para trabajar con el Repositorio Remoto
 * En lugar de git init
 ```
 git clone url
