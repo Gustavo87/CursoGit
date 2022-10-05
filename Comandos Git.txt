@@ -96,12 +96,3 @@ git remote set-url origin git@github.com:Gustavo87/CursoGit.git
 //Hacer cambios con la nueva url
 //Primeramente, nos traemos todo del repo de GitHub
 git pull origin master
-
-
-
-
-
-
-
-
-
