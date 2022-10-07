@@ -8,7 +8,7 @@
 # Comandos GIT para trabajar con el Repositorio Local
 * Crear el Staging y Repositorio Local. 
 ```console
-git init
+(master)$ git init
 ```
 * Movemos los cambios en un archivo al Staging para trackearlo.
 ```
