@@ -12,7 +12,7 @@ git init
 ```
 * Movemos los cambios en un archivo al Staging para trackearlo.
 ```
-git add **archivo**
+git add `**`archivo`**`
 ```
 * Enviamos lo que esta en staging a nuestro repositorio
 ```
