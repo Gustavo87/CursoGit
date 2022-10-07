@@ -82,6 +82,18 @@ git show
 ```
 git diff
 ```
+* Para ver el log de commit de una forma más amigable
+```
+git log --all --graph --decorate --oneline
+```
+* Crear un alias del comando anterior
+```
+ alias arbolito="git log --all --graph --decorate --oneline"
+```
+* Ver el status, o sea, si tenemos algo pendiente de agregar al Staging `git add` o al repository local `git commit`.
+```
+git status
+```
 # Comandos para trabajar con las ramas 
 * Crear una rama
 ```
@@ -139,33 +151,29 @@ git pull origin master
 ```
 git push origin master
 ```
-* Para ver el log de commit de una forma más amigable
-```
-git log --all --graph --decorate --oneline
-```
-* Crear un alias del comando anterior
-```
- alias arbolito="git log --all --graph --decorate --oneline"
-```
+
 * Definimos un versión a traves del comando `tag` para un commit en concreto.
 ```
 $ git tag -a v0.1 -m "Resultado de las primeras clases del curso" 12629e9
 ```
-* Ver los tag que tenemos creados
+* Ver los `tag` que tenemos creados
 ```
 git tag
 ```
-* Ver a que commit esta conectado que tag.
+* Ver el hash que se creo para identificar un `tag` en concreto.
 ```
 git show-ref --tags
 ```
-* Luego de crear el tag, igual que los `commit`, tenemos que enviarlos a servidor de GitHub.
+* Luego de crear el `tag`, igual que los `commit`, tenemos que enviarlos al servidor de GitHub.
+```
 git push origin --tags
-
+```
 * Borrar un tag de nuestro repositorio local.
-* Usamos el comando
+* Primerante, usamos el comando
+```
 git tag -d nombre_tag
-* Mandamos los cambios con git `push origin --tags`
+```
+* Luego, mandamos los cambios con git `push origin --tags`
 * Borrarlo tambien de GitHub
 ```
 git push origin :refs/tags/nombre_tag
