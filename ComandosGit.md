@@ -151,7 +151,8 @@ git pull origin master
 ```
 git push origin master
 ```
-
+# Comandos para gestionar `tag`
+* Los `tag` se usan para identificar las versiones de nuestro proyecto.
 * Definimos un versión a traves del comando `tag` para un commit en concreto.
 ```
 $ git tag -a v0.1 -m "Resultado de las primeras clases del curso" 12629e9
