@@ -66,6 +66,11 @@ git pull origin master
 
 # Otros comandos importantes 
 
+* Ver las settings del usuario, por ejemplo, username y correo.
+```
+git config -l
+```
+
 * Hace add y commit al mismo tiempo, solo funciona si le hemos echo add al archivo anteriormente, es decir, no hay creación de archivos nuevos.
 ```
 git commit -am
@@ -96,6 +101,7 @@ git status
 ```
 # Comandos para trabajar con las ramas 
 * Crear una rama
+* Lo normal es crear una rama siempre desde la rama que tenga los cambios mas recientes, esta es, por lo general, la rama master.
 ```
 git branch nombre_rama
 ```
@@ -126,6 +132,15 @@ git show-branch --all
 * Nos muestra cuales han sido la historia de las ramas, en una interfaz de ventanas (GUI)
 ```
 gitk
+```
+* Subir una rama a GitHub
+* Primeramente, nos movemos a la rama.
+```
+git checkout nombre_rama
+```
+* Subimos la rama
+```
+git push origin nombre_rama
 ```
 # Generar llaves publicas/privadas para la conexion ssh al servidor de Github
 ```
