@@ -30,9 +30,7 @@ git clone url
 ```
 git push
 ```
-* Si el que hace `push` es un usuario diferente al que creo el repositorio, este usuario deberia ser agregado como 
-* colaborador en las settings del repositorio al que quiere hacer `push`, sin embargo una vez que es agregado debe
-* aceptar la notificacion de GitHub que le llegara por correo.
+* Si el que hace `push` es un usuario diferente al que creo el repositorio, este usuario deberia ser agregado como colaborador en las settings del repositorio al que quiere hacer `push`, sin embargo una vez que es agregado debe aceptar la notificacion de GitHub que le llegara por correo. En la imagen siguiente, agregare al usuario `GusBaca` como colaborador del repositorio `CursoGit`
 ![](https://raw.githubusercontent.com/Gustavo87/CursoGit/master/AddCollaboratorToRepo.png)
 
 * Si queremos traer una actualizacion tras haber clonado, el push de otra persona
