@@ -151,7 +151,7 @@ git push origin nombre_rama
 * En este punto hara sus cambios: `commit`, `add`
 * Luego debera subir sus cambios a GitHub: `git push origin header`
 * Luego de esto, se deberan fusionar los cambios del branch `header` con el branch `master`
-* Por tanto, nos movemos al branch `master`: git merge headergit checkout master`
+* Por tanto, nos movemos al branch `master`: `git checkout master`
 * Unimos los cambios de `header` a `master`: `git merge header`
 * Subimos los cambios en `master`, pero antes tenemos que hacer  `git pull origin master` por si algo paso en el server de GitHub: `git push origin master`
 
