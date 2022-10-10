@@ -146,6 +146,15 @@ git checkout nombre_rama
 ```
 git push origin nombre_rama
 ```
+* Un posible flujo de trabajo podria ser el siguiente: Supongamos que tengo una rama principal `master` esta representa, segun las mejoras practicas los cambios en `produccion`, sin embargo he creado una rama `header` para que otro dev trabaje esa rama para, posteriormente, fusionarla con la rama `master`.
+* En primer lugar el dev, debera traer la rama a su repositorio local: `git pull origin header`
+* En este punto hara sus cambios: `commit`, `add`
+* Luego debera subir sus cambios a GitHub: `git push origin header`
+* Luego de esto, se deberan fusionar los cambios del branch `header` con el branch `master`
+* Por tanto, nos movemos al branch `master`: git merge headergit checkout master`
+* Unimos los cambios de `header` a `master`: `git merge header`
+* Subimos los cambios en `master`, pero antes tenemos que hacer  `git pull origin master` por si algo paso en el server de GitHub: `git push origin master`
+
 # Generar llaves publicas/privadas para la conexion ssh al servidor de Github
 ```
 ssh-keygen -t rsa -b 4096 -C un_correo
@@ -208,3 +217,8 @@ git tag -d nombre_tag
 ```
 git push origin :refs/tags/nombre_tag
 ```
+
+# Buenas Practicas.
+* Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
+* En la rama `master` solo debe estar aquello que esta listo para ir a `produccion`.
+
