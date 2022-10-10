@@ -116,7 +116,17 @@ git checkout master
 ```
 git merge nombre_rama
 ```
-
+* Nos muestra cuales son las ramas que existen y cual ha sido su historia
+```
+git show-branch
+```
+```
+git show-branch --all
+```
+* Nos muestra cuales han sido la historia de las ramas, en una interfaz de ventanas (GUI)
+```
+gitk
+```
 # Generar llaves publicas/privadas para la conexion ssh al servidor de Github
 ```
 ssh-keygen -t rsa -b 4096 -C un_correo
