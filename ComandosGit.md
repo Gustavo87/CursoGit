@@ -20,6 +20,7 @@ git commit
 ```
 # Comandos GIT para trabajar con el Repositorio Remoto
 * En lugar de git init
+* Para clonar un repositorio publico a traves de https, no se piden ni usuario ni clave.
 ```
 git clone url
 ```
