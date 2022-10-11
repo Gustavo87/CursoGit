@@ -218,7 +218,34 @@ git tag -d nombre_tag
 git push origin :refs/tags/nombre_tag
 ```
 
-# Buenas Practicas.
+# Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
 * En la rama `master` solo debe estar aquello que esta listo para ir a `produccion`.
+* Normalmente se bloquea el acceso a la rama master, de modo que no cualquiera pueda hacer `merge` sin antes pasar por un `code review`
+* `Servidores de Desarrollo` o `Servidores de Stating` son normalmente los nombres para describir nuestros ambientes de pruebas.
+* `Pull request` que es una caracteristica exclusiva de `GitHub`, es un estado intermedio antes de hacer un `merge`. En `GitLab` se conoce como `merge request`. En `Bitbucket` se conoce como `push request`. Esta tarea es del `Dev Ops` la persona que es el administrador del entorno de desarrollo.
+
+# Flujos de trabajo/ Escenarios
+* Imaginemos que tenemos 2 bugs, por tanto vamos a crear una rama aparte tomando como base la rama principal, luego vamos a fusionar dicha ramacon la rama principal. 
+* `git pull origin master`
+* `git branch fix-bug`
+* `git checkout fix-bug`
+* Reparamos el bug.
+* `git status`
+* `git diff`
+* `git add .` 
+* `git commit -m`
+* `git push origin fix-bug`
+* Desde GitHub vamos a crear un `new pull request`. En este punto definimos que vamos a comparar la `master` contra `fix-bug`.  Al hacer un `pull request` nos permite ver los cambios, agregar detalles, por defecto, se toma el comentario del `commit` como el nombre del `pull request`, agregar un comentario, agregar `reviewers` que son personas que van a revisar el `pull request`, agregar `labels` al `pull request` y muchas otras cosas utiles para el proceso de `dev ops`. 
+* El `pull request` no ejecuta el `merge` simplemente describe lo que esta pasando, luego alguien puede revisarlo y ejectuarlo. 
+* Ahora vamos a ver desde la perspectiva de un `reviewers`. El `reviewers` ve la notificacion de que tiene un `pull request`, dentro del `pull request` podemos ver detalles como por ejemplo que la rama `fix-bug` no tiene conflictos con `master`, por tanto se puede fusionar, o sea; darle al boton `Merge pull request`; ver los `commits` asociados a este `pull request`; ver los archivos cambiados y lo que se cambio. Supongamos que el `reviewer` no va a aceptar el `pull request`, entonces le damos al boton `review changes`, escribimos un comentario y el damos al boton `Request changes`.
+* Tras el envio de un `request changes` por parte del `reviewer` al `pull request` volvemos a la vista de la persona que creo el `pull request`. Esta persona mira que el `pull request` no se ha aprovado, por tanto, hace el cambio definido en el `request changes`. 
+* `git pull origin fix-bug`
+* Hacemos el cambio.
+* `git commit -m`
+* `git push origin master`
+* Volvemos a `GitHub` y en el `pull request` le damos a la opcion de `conversacion` para agregar un comentario notificandole al `reviewer` que lo sugerido en el `request changes` esta aplicado.
+* Volvemos al punto de vista del `reviewer`. En el `pull request` en `review changes` escribimos un comentario para notificar que por ejemplo ahora si todo esta ok y finalmente, escogemos la opcion `Approve` y le damos al boton de `Submit review`. Esto significa que hemos aprovado los cambios, pero eso no significa que el `merge` se ha ejecutado, significa solamente que yo, como `reviewer` estoy aprovando los cambios. Alguien tiene que tomar la decision de hacer el `merge`, ese alguien es un `colaborador` del repositorio en cuestion.  Todo lo descrito antes es lo que se llama `code review`. Para hacer `pull request` alguien debe darle al boton `Merge pull request`. Ponemos un comentario, confirmamos en el boton `Confirm merge`. Tras hecho el `merge` nos sale la opcion de borrar el branch en este caso `fix-bug` (la decision de borrar o no depende del equipo de trabajo). 
+* Tras el `merge` en mi repositorio local deberia hacer:  `git pull origin master`, luego `git log`
+* En resumen, el `pull request` es como un `stating` del lado del servidor.
 
