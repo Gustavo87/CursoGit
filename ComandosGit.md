@@ -226,7 +226,7 @@ git push origin :refs/tags/nombre_tag
 * `Pull request` que es una caracteristica exclusiva de `GitHub`, es un estado intermedio antes de hacer un `merge`. En `GitLab` se conoce como `merge request`. En `Bitbucket` se conoce como `push request`. Esta tarea es del `Dev Ops` la persona que es el administrador del entorno de desarrollo.
 
 # Flujos de trabajo/ Escenarios
-* Imaginemos que tenemos 2 bugs, por tanto vamos a crear una rama aparte tomando como base la rama principal, luego vamos a fusionar dicha ramacon la rama principal. 
+* Imaginemos que tenemos 2 bugs, por tanto vamos a crear una rama aparte tomando como base la rama principal, luego vamos a fusionar dicha rama con la rama principal. 
 * `git pull origin master`
 * `git branch fix-bug`
 * `git checkout fix-bug`
