@@ -259,6 +259,9 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 * Es buena practica proteger el archivo `.git` puesto que esto representa la base de datos de `git`. Hay una herramienta `Travis CI` que conecta tus `branch` de GitHub con tu servidor, de modo que cuando haces `push` a la rama `master` o a la rama que ira a produccion, `Travis CI`, detecta el cambio y lo mandara al server, sin embargo `Travis CI` es de paga, salvo para proyectos Open Source. Otra alternativa es `Jenkis`.
 
 ## Archivo .gitignore
-* Creamos un nuevo archivo que vamos a guardar en la raiz de nuestro proyecto, el archivo se debe llamar  `.gitignore`, aca listamos los archivos que no van a estar versionados (ejemplo archivos binarios), para el caso de las imagenes, introducimos la siguiente linea en ese archivo `.igtignore`: `*.jpg`. Igualmente el archivo `.gitignore` debe ser agregado a traves de `git add .` Las imagenes en un proyecto web deberian ir en un `content delivery network`. Podríamos subir las imagenes a `imgur.com` y referenciarlas en nuestro proyecto.
+* Creamos un nuevo archivo que vamos a guardar en la raiz de nuestro proyecto, el archivo se debe llamar  `.gitignore`, aca listamos los archivos que no van a estar versionados (ejemplo archivos binarios), para el caso de las imagenes, introducimos la siguiente linea en ese archivo `.gitignore`: 
+* `*.jpg` 
+* Igualmente el archivo `.gitignore` debe ser agregado a traves de `git add .`
+* Las imagenes en un proyecto web deberian ir en un `content delivery network`. Podríamos subir las imagenes a `imgur.com` y referenciarlas en nuestro proyecto.
 # Mas alla de estas notas.
 * Que son los releases en GitHub.
