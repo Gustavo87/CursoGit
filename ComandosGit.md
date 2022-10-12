@@ -1,10 +1,3 @@
-# Recursos utiles/urls
-* https://learngitbranching.js.org/
-* https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
-* https://github.com/settings/repositories
-
-
-
 # Comandos GIT para trabajar con el Repositorio Local
 * Crear el Staging y Repositorio Local. 
 ```bash
@@ -225,6 +218,7 @@ git push origin :refs/tags/nombre_tag
 * `Servidores de Desarrollo` o `Servidores de Stating` son normalmente los nombres para describir nuestros ambientes de pruebas.
 * `Pull request` que es una caracteristica exclusiva de `GitHub`, es un estado intermedio antes de hacer un `merge`. En `GitLab` se conoce como `merge request`. En `Bitbucket` se conoce como `push request`. Esta tarea es del `Dev Ops` la persona que es el administrador del entorno de desarrollo.
 * Utilizar `Jenkis` como buena práctica de integración continua al momento de hacer `deploy`
+* Tener un archivo `.gitignore` and `readme.md`
 
 # Flujos de trabajo/ Escenarios
 ## Pull Request
@@ -258,10 +252,23 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 * En primera instancia, copiamos la url de https de GitHub. En nuestro server al que haremos `deployment` debemos tener instalado `git`. Luego `git clone url_GitHub_repo` en el directorio de nuestro server http. Listo el `deployment`!
 * Es buena practica proteger el archivo `.git` puesto que esto representa la base de datos de `git`. Hay una herramienta `Travis CI` que conecta tus `branch` de GitHub con tu servidor, de modo que cuando haces `push` a la rama `master` o a la rama que ira a produccion, `Travis CI`, detecta el cambio y lo mandara al server, sin embargo `Travis CI` es de paga, salvo para proyectos Open Source. Otra alternativa es `Jenkis`.
 
-## Archivo .gitignore
+# Archivo .gitignore
 * Creamos un nuevo archivo que vamos a guardar en la raiz de nuestro proyecto, el archivo se debe llamar  `.gitignore`, aca listamos los archivos que no van a estar versionados (ejemplo archivos binarios), para el caso de las imagenes, introducimos la siguiente linea en ese archivo `.gitignore`: 
  `*.jpg` 
 * Igualmente el archivo `.gitignore` debe ser agregado a traves de `git add .`
 * Las imagenes en un proyecto web deberian ir en un `content delivery network`. Podríamos subir las imagenes a `imgur.com` y referenciarlas en nuestro proyecto.
+
+# Readme.md
+* En un archivo `readme.md` puedes agregar html o `markdown`.
+* Un editor para `markdown` https://pandao.github.io/editor.md/en.html
+
+
 # Mas alla de estas notas.
 * Que son los releases en GitHub.
+
+# Recursos utiles/urls
+* https://learngitbranching.js.org/
+* https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
+* https://github.com/settings/repositories
+* https://pandao.github.io/editor.md/en.html
+* https://imgur.com/
