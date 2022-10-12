@@ -224,6 +224,7 @@ git push origin :refs/tags/nombre_tag
 * Normalmente se bloquea el acceso a la rama master, de modo que no cualquiera pueda hacer `merge` sin antes pasar por un `code review`
 * `Servidores de Desarrollo` o `Servidores de Stating` son normalmente los nombres para describir nuestros ambientes de pruebas.
 * `Pull request` que es una caracteristica exclusiva de `GitHub`, es un estado intermedio antes de hacer un `merge`. En `GitLab` se conoce como `merge request`. En `Bitbucket` se conoce como `push request`. Esta tarea es del `Dev Ops` la persona que es el administrador del entorno de desarrollo.
+* Utilizar `Jenkis` como buena práctica de integración continua al momento de hacer `deploy`
 
 # Flujos de trabajo/ Escenarios
 ## Pull Request
@@ -254,5 +255,6 @@ git push origin :refs/tags/nombre_tag
 Es interesante que una vez que alguien hace cambios en el proyecto original, tendre un notificacion en mi proyecto que es un `fork` que me dice que estoy 3, por ejemplo, del proyecto original, luego puedo comparar estos `commit` para ver que son, debo hacer, `switching the base`, porque por defecto la comparación es del `fork` al original, pero voy a comparar del original al `fork`. En este punto puede picar el boton `Create pull request` para luego hacer `merge`. Sin embargo lo podemos hacer desde consola. En este punto lo interesante es que vamos a crear una fuente distinta para hacer `pull`. Escribamos el comando `git remote -v` para ver ambas fuentes `pull` and `push`. Entonces voy a cambiar la fuente de `pull` para que venga del proyecto original con el comando: `git remote add upstream url_proyecto_original`. Luego con `git remote -v`, veremos que hay una nueva fuente de datos. Ahora si ya podemos actualizar con el comando: `git pull upstream master` para traer los cambios a nuestra base de datos local. Finalmente hacer `push` para mandar el `pull` que bajamos a nuestro repositorio `fork` con el comando: `git push origin master`.
 
 ## Deployment a un servidor
+* En primera instancia, copiamos la url de https de GitHub. En nuestro server al que haremos `deployment` debemos tener instalado `git`. Luego `git clone url_GitHub_repo` en el directorio de nuestro server http. Listo el `deployment`!. Luego hacemos un cambio en el repositorio. Es buena practica proteger el archivo `.git` puesto que esto representa la base de datos de `git`. `Travis CI` conecta tus `branch` de GitHub con tu servidor, de modo que cuando haces `push` a la rama `master` o a la rama que ira a produccion, `Travis CI`, detecta el cambio y lo mandara al server, sin embargo `Travis CI` es de paga, salvo para proyectos Open Source. Otra alternativa es `Jenkis`.
 # Mas alla de estas notas.
 * Que son los releases en GitHub.
