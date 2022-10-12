@@ -226,6 +226,7 @@ git push origin :refs/tags/nombre_tag
 * `Pull request` que es una caracteristica exclusiva de `GitHub`, es un estado intermedio antes de hacer un `merge`. En `GitLab` se conoce como `merge request`. En `Bitbucket` se conoce como `push request`. Esta tarea es del `Dev Ops` la persona que es el administrador del entorno de desarrollo.
 
 # Flujos de trabajo/ Escenarios
+## Pull Request
 * Imaginemos que tenemos 2 bugs, por tanto vamos a crear una rama aparte tomando como base la rama principal, luego vamos a fusionar dicha rama con la rama principal. 
 * `git pull origin master`
 * `git branch fix-bug`
@@ -249,7 +250,10 @@ git push origin :refs/tags/nombre_tag
 * Tras el `merge` en mi repositorio local deberia hacer:  `git pull origin master`, luego `git log`
 * En resumen, el `pull request` es como un `stating` del lado del servidor.
 ---
+## Fork
 * Vamos a entender como funciona un proyecto Open Source, donde tenes al dueño de proyecto y personas que les gusta el proyecto y que quiere aportar al mismo. Este tipo de personas pueden hacer `clone` del proyecto, pero no hacer `push` de ningun tipo. Desde la perspectiva de esa persona que le gusta el proyecto y quiere aportar sin ser un colaborador, podemos darle al boton `watch` y de esta manera me llegaran notificaciones en el momento que salgan cosas. Otra cosa que podemos hacer es hacer un `fork` que es tomar una copia del estado actual de un proyecto/repositorio publico de GitHub y clonarlo, esto es una caracteristica unica de GitHub, no esta presente en Git. Tras hacer `fork` de algun proyecto, lo siguiente seria hacerle cambios, por tanto, vamos a traerlo a nuestro pc a traves de `git clone`. En este punto podemos hacer cambios y su respectivo `commit` y `push`, luego vendría el como hacer el `pull request` entre proyectos/repositorios diferentes? Puesto que GitHub sabe que el proyecto es un `fork` nos facilita la parte del `pull request` al repositorio original. Por tanto, pinchamos el boton `new pull request`, presenta luego, una interfaz para comparar los `branch`, ver los archivos modificados. Luego pinchamos el boton `Create pull request` tras dejar un comentario. Desde la perspectiva del propietario del repositorio original, podemos ver los cambios, en el botón `Review changes`, dejar un comentario, `Approve` (checkbox) y subir el comentario picando en el botón `submit review`. Luego damos al boton `Merge pull request`, confirmamos picando en `Confirm merge`. Listo hemos contribuido al proyecto original! 
 Es interesante que una vez que alguien hace cambios en el proyecto original, tendre un notificacion en mi proyecto que es un `fork` que me dice que estoy 3, por ejemplo, del proyecto original, luego puedo comparar estos `commit` para ver que son, debo hacer, `switching the base`, porque por defecto la comparación es del `fork` al original, pero voy a comparar del original al `fork`. En este punto puede picar el boton `Create pull request` para luego hacer `merge`. Sin embargo lo podemos hacer desde consola. En este punto lo interesante es que vamos a crear una fuente distinta para hacer `pull`. Escribamos el comando `git remote -v` para ver ambas fuentes `pull` and `push`. Entonces voy a cambiar la fuente de `pull` para que venga del proyecto original con el comando: `git remote add upstream url_proyecto_original`. Luego con `git remote -v`, veremos que hay una nueva fuente de datos. Ahora si ya podemos actualizar con el comando: `git pull upstream master` para traer los cambios a nuestra base de datos local. Finalmente hacer `push` para mandar el `pull` que bajamos a nuestro repositorio `fork` con el comando: `git push origin master`.
+
+## Deployment a un servidor
 # Mas alla de estas notas.
 * Que son los releases en GitHub.
