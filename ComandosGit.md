@@ -262,6 +262,8 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 * En un archivo `readme.md` puedes agregar html o `markdown`.
 * Un editor para `markdown` https://pandao.github.io/editor.md/en.html
 
+# Hosting gratis en GitHub: GitHub Pages
+* Nos vamos a https://pages.github.com/
 
 # Mas alla de estas notas.
 * Que son los releases en GitHub.
@@ -272,3 +274,5 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 * https://github.com/settings/repositories
 * https://pandao.github.io/editor.md/en.html
 * https://imgur.com/
+* https://pages.github.com/
+
