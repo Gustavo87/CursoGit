@@ -260,7 +260,7 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 
 ## Archivo .gitignore
 * Creamos un nuevo archivo que vamos a guardar en la raiz de nuestro proyecto, el archivo se debe llamar  `.gitignore`, aca listamos los archivos que no van a estar versionados (ejemplo archivos binarios), para el caso de las imagenes, introducimos la siguiente linea en ese archivo `.gitignore`: 
-* `*.jpg` 
+ `*.jpg` 
 * Igualmente el archivo `.gitignore` debe ser agregado a traves de `git add .`
 * Las imagenes en un proyecto web deberian ir en un `content delivery network`. Podríamos subir las imagenes a `imgur.com` y referenciarlas en nuestro proyecto.
 # Mas alla de estas notas.
