@@ -248,4 +248,4 @@ git push origin :refs/tags/nombre_tag
 * Volvemos al punto de vista del `reviewer`. En el `pull request` en `review changes` escribimos un comentario para notificar que por ejemplo ahora si todo esta ok y finalmente, escogemos la opcion `Approve` y le damos al boton de `Submit review`. Esto significa que hemos aprovado los cambios, pero eso no significa que el `merge` se ha ejecutado, significa solamente que yo, como `reviewer` estoy aprovando los cambios. Alguien tiene que tomar la decision de hacer el `merge`, ese alguien es un `colaborador` del repositorio en cuestion.  Todo lo descrito antes es lo que se llama `code review`. Para hacer `pull request` alguien debe darle al boton `Merge pull request`. Ponemos un comentario, confirmamos en el boton `Confirm merge`. Tras hecho el `merge` nos sale la opcion de borrar el branch en este caso `fix-bug` (la decision de borrar o no depende del equipo de trabajo). 
 * Tras el `merge` en mi repositorio local deberia hacer:  `git pull origin master`, luego `git log`
 * En resumen, el `pull request` es como un `stating` del lado del servidor.
-
+---
