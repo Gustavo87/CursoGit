@@ -221,7 +221,9 @@ git push origin :refs/tags/nombre_tag
 * Hacemos algun cambio.
 * Hacemos `commit`
 * Vamos a pegar las ramas, de modo que, hagamos de cuentas que el `branch` experimientos nunca existió, nos movemos, pues a la rama experimiento y hacemos: `git rebase master`
-*  
+
+# Git Stash
+* 
 
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
@@ -279,6 +281,7 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 
 # Mas alla de estas notas.
 * Que son los releases en GitHub.
+* Git Rebase
 
 # Recursos utiles/urls
 * https://learngitbranching.js.org/
