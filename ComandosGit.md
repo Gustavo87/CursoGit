@@ -240,6 +240,10 @@ git stash pop
 ```
 git stash branch nueva_rama
 ```
+* `stash` nos puede servir para volver al ultimo `commit`, de modo que, recuperamos los cambios anteriores. Luego podemos aplicar el siguiente comando:
+ ```
+    git stash drop
+ ```
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
 * En la rama `master` solo debe estar aquello que esta listo para ir a `produccion`.
