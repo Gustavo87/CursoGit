@@ -288,5 +288,4 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 * https://imgur.com/
 * https://pages.github.com/
 
-* Thanks a lot Git and GitHub :)
 
