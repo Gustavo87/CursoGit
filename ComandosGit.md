@@ -212,7 +212,12 @@ git push origin :refs/tags/nombre_tag
 ```
 
 # Git Rebase
-* Este opción es solo adecuada para repositorios locales, no para remotos, porque reescribe la historia del repositorio, es un parche. `Rebase` es hacer de cuenta que la rama nunca existio. 
+* Este opción es solo adecuada para repositorios locales, no para remotos, porque reescribe la historia del repositorio, es un parche. `Rebase` es hacer de cuenta que la rama nunca existio. Ejemplo de uso:
+* Creamos un nuevo branch `git branch experimento`
+* Nos movemos a ese branch `git checkout experimento`
+* Hacemos algun cambio.
+* Hacemos `commit` 
+* 
 
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
@@ -278,4 +283,6 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 * https://pandao.github.io/editor.md/en.html
 * https://imgur.com/
 * https://pages.github.com/
+
+* Thanks a lot Git and GitHub :)
 
