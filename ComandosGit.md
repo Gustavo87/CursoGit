@@ -223,8 +223,23 @@ git push origin :refs/tags/nombre_tag
 * Vamos a pegar las ramas, de modo que, hagamos de cuentas que el `branch` experimientos nunca existió, nos movemos, pues a la rama experimiento y hacemos: `git rebase master`
 
 # Git Stash
-* 
-
+* Es una buffer donde podemos guardar cambios sin necesidad de hacer `commit` de modo que podamos cambiarnos de `branch`.
+* Enviar un cambio al buffer
+```
+git stash
+```
+* Ver el estado del buffer
+```
+git stash list
+```
+* Sacar el ultimo cambio para restaurarlo.
+```
+git stash pop
+```
+* Guardar los cambios y ponerlos en una rama.
+```
+git stash branch nueva_rama
+```
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
 * En la rama `master` solo debe estar aquello que esta listo para ir a `produccion`.
