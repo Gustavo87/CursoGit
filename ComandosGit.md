@@ -213,11 +213,15 @@ git push origin :refs/tags/nombre_tag
 
 # Git Rebase
 * Este opción es solo adecuada para repositorios locales, no para remotos, porque reescribe la historia del repositorio, es un parche. `Rebase` es hacer de cuenta que la rama nunca existio. Nos permite hacer cambios silenciosos entre las ramas. Ejemplo de uso:
-* Creamos un nuevo branch `git branch experimento`
+* Creamos un nuevo branch tomando de base el `branch` `master` o `main` `git branch experimento`
 * Nos movemos a ese branch `git checkout experimento`
 * Hacemos algun cambio.
 * Hacemos `commit` 
-* Vamos a pegar las ramas, de modo que, hagamos de cuentas que el `branch` experimientos nunca existió, nos movemos, pues a la rama experimiento y hacemos: `git rebase master` 
+* Del `expermiento` nos movemos al `branch` original.
+* Hacemos algun cambio.
+* Hacemos `commit`
+* Vamos a pegar las ramas, de modo que, hagamos de cuentas que el `branch` experimientos nunca existió, nos movemos, pues a la rama experimiento y hacemos: `git rebase master`
+*  
 
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
