@@ -244,8 +244,15 @@ git stash branch nueva_rama
  ```
     git stash drop
  ```
- # Git Clean
- 
+# Git Clean
+* Te muestra los archivos que se van a borrar, no aplica para archivos dentro de carpetas.
+```
+ git clean --dry-run
+```
+* Para hacer el borrado.
+```
+git clean -f
+```
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
 * En la rama `master` solo debe estar aquello que esta listo para ir a `produccion`.
