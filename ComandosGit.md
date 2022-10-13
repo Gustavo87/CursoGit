@@ -240,7 +240,7 @@ git stash pop
 ```
 git stash branch nueva_rama
 ```
-* `stash` nos puede servir para volver al ultimo `commit`, de modo que, recuperamos los cambios anteriores. Luego podemos aplicar el siguiente comando:
+* `stash` nos puede servir para volver al ultimo `commit`, de modo que, recuperamos los cambios anteriores. Luego podemos aplicar el siguiente comando para eliminar del bufer esos cambios:
  ```
     git stash drop
  ```
