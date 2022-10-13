@@ -1,6 +1,6 @@
 # Comandos GIT para trabajar con el Repositorio Local
 * Crear el Staging y Repositorio Local. 
-```bash
+```
 git init
 ```
 * Movemos los cambios en un archivo al Staging para trackearlo.
@@ -211,6 +211,9 @@ git tag -d nombre_tag
 git push origin :refs/tags/nombre_tag
 ```
 
+# Git Rebase
+* Este opción es solo adecuada para repositorios locales, no para remotos, porque reescribe la historia del repositorio, es un parche. `Rebase` es hacer de cuenta que la rama nunca existio. 
+
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
 * En la rama `master` solo debe estar aquello que esta listo para ir a `produccion`.
@@ -262,7 +265,7 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 * En un archivo `readme.md` puedes agregar html o `markdown`.
 * Un editor para `markdown` https://pandao.github.io/editor.md/en.html
 
-# Hosting gratis en GitHub: GitHub Pages
+# Hosting gratis en GitHub: `GitHub Pages`
 * Nos vamos a https://pages.github.com/
 
 # Mas alla de estas notas.
