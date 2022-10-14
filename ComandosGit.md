@@ -275,7 +275,7 @@ git reflog
 ```
 * `git reset SOFT` mantiene lo que esta en `staging`, `git reset HARD`, no.
 ```
- git reset HARD hash_head
+ git reset --hard hash_head
 ```
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
