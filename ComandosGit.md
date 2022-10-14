@@ -117,6 +117,14 @@ git checkout nombre_rama
 ```
 git branch
 ```
+* Ver las ramas remotas (en GitHub)
+```
+git branch -r
+```
+* Ver todas las ramas (locales y remotas)
+```
+git branch -a
+```
 * Unir ramas
 * Primeramente, nos movemos a la rama master.
 ```
@@ -282,6 +290,49 @@ git reflog
 ```
 git commit --amend
 ```
+# Busquedas entre commit con Grep y Log
+* Para buscar en los archivos de nuestro proyecto.
+```
+git grep palabra
+```
+* Saber el numero de linea en el archivo donde aparece palabra
+```
+git grep -n palabra
+```
+* Contar las apariciones de palabra en los archivos
+```
+git grep -c palabra
+```
+* Para buscar en los `commit`.
+```
+git log --all --grep=palabra
+```
+# Comandos y recursos colaborativos en Git y GitHub
+# shortlog
+* Para ver los `commits` por persona
+```
+git shortlog
+```
+* Contar la cantidad de `commits` por persona
+```
+git shortlog -sn --all --no-merges
+```
+# Crear alias dentro de Git
+```
+ git config --global alias.nombre_comando "comando"
+```
+* Ejemplo
+```
+git config --global alias.stats "shortlog -sn --all --no-merges"
+```
+# Ver quien ha hecho que cosa sobre un archivo.
+```
+git blame -c archivo
+```
+* Ver quien hizo los cambios en el archivo ComandosGit.md desde la linea 1 hasta la 10
+```
+ git blame -c ComandosGit.md -L1,10
+```
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
 * En la rama `master` solo debe estar aquello que esta listo para ir a `produccion`.
@@ -339,7 +390,8 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 # Mas alla de estas notas.
 * Que son los releases en GitHub.
 * Git Rebase
-
+* Git Lab, es como GitHub, pero lo puedes correr en tu propio server
+* Mas sobre DevOps lifeCycle.
 # Recursos utiles/urls
 * https://learngitbranching.js.org/
 * https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow
