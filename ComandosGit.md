@@ -63,6 +63,11 @@ git pull origin master
 
 # Otros comandos importantes 
 
+* Ver la ayuda de cualquier comando. Por ejemplo `commit`
+```
+ git commit --help
+```
+
 * Ver las settings del usuario, por ejemplo, username y correo.
 ```
 git config -l
@@ -418,3 +423,5 @@ Es interesante que una vez que alguien hace cambios en el proyecto original, ten
 * https://pages.github.com/
 
 
+# Errores
+* https://www.educative.io/answers/the-fatal-refusing-to-merge-unrelated-histories-git-error
