@@ -72,7 +72,7 @@ git config -l
 ```
 git commit -am
 ```
-* Vemos los archivos afectados.
+* Vemos los archivos afectados y sus cambios
 ```
 git log --stat
 ```
@@ -80,9 +80,10 @@ git log --stat
 ```
 git show
 ```
-* Ver lo que ha cambiado
+* Para comparar antes de hacer `add`(antes pasar al staging) lo que esta en `stating` vs lo que esta en el disco.
+* Tras hacer `add` pasamos los cambios del disco a `staging`, por tanto este comando, no muestra nada, igualmente tras hacer `commit`  o sea pasar del `staging` al repositorio local. 
 ```
-git diff
+git diff 
 ```
 * Para ver el log de commit de una forma más amigable
 ```
@@ -99,6 +100,18 @@ git log --oneline
 ```
 git status
 ```
+
+# Git reset
+* Para volver a un `commit` anterior, usamos `reset`, tenemos el `hard` y el `soft`. En el `soft` lo que estaba en `staging` queda alli, no se borra. 
+```
+git reset hash_commit --hard
+```
+# Git Checkout
+* Para ir al estado de un archivo de un `commit` en particular o un `branch` en particular.
+```
+git checkout hash_commit/rama archivo
+```
+# 
 # Comandos para trabajar con las ramas 
 * Crear una rama
 * Lo normal es crear una rama siempre desde la rama que tenga los cambios mas recientes, esta es, por lo general, la rama master.
