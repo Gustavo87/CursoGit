@@ -88,6 +88,9 @@ git diff
 ```
 git log --all --graph --decorate --oneline
 ```
+```
+git log --oneline
+```
 * Crear un alias del comando anterior
 ```
  alias arbolito="git log --all --graph --decorate --oneline"
@@ -101,6 +104,10 @@ git status
 * Lo normal es crear una rama siempre desde la rama que tenga los cambios mas recientes, esta es, por lo general, la rama master.
 ```
 git branch nombre_rama
+```
+* Borrar una rama
+```
+git branch -D nombre_rama
 ```
 * Moverme a otra rama
 ```
@@ -252,6 +259,23 @@ git stash branch nueva_rama
 * Para hacer el borrado.
 ```
 git clean -f
+```
+# Git cherry-pick
+* Trae el `commit` hecho en un `branch` en otro `branch`. Debemos estar ubicados en el `branch` donde queremos importar el `commit`.
+```
+git cherry-pick hash_del_commit
+```
+* Recordemos que el hash del `commit` lo podemos ver con: `git log --oneline`, por ejemplo.
+* Posiblemente al hacer `merge` de los `branch` implicados en el `git cherry-pick` aparezca un conflicto que debamos resolver a mano, por esta razon, `cherry-pick` es considerado una mala practica y debe ser usado con cuidado.
+
+# Git Reflog / Git Reset
+* Muestra el historial de todas las acciones en Git, asimismo los diferentes `heads` que se han venido usando, de modo que, podamos volver a un `head` y recuperar ese status quo.
+```
+git reflog
+```
+* `git reset SOFT` mantiene lo que esta en `staging`, `git reset HARD`, no.
+```
+ git reset HARD hash_head
 ```
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
