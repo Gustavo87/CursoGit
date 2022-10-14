@@ -273,9 +273,14 @@ git cherry-pick hash_del_commit
 ```
 git reflog
 ```
-* `git reset SOFT` mantiene lo que esta en `staging`, `git reset HARD`, no.
+* `git reset --soft` mantiene lo que esta en `staging`, `git reset --hard`, no.
 ```
- git reset HARD hash_head
+ git reset --hard hash_head
+```
+# Git commit --amend
+* Usamos este comando cuando queremos mandar los cambios del `commit` a un `commit` anterior, de modo que, no se cree un nuevo `commit`. No utilizar esta opcion si ya se ha hecho `push`.
+```
+git commit --amend
 ```
 # Buenas Practicas/ Notas Generales
 * Los archivos binarios, por ejemplo, imagenes no deberian ser agregados al repositorio.
