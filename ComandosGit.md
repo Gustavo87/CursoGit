@@ -106,6 +106,10 @@ git status
 ```
 git reset hash_commit --hard
 ```
+# ¿Cuál es la diferencia entre git rm y git reset HEAD?
+
+* `Git reset HEAD`: Este es el comando para sacar archivos del área de staging. No para borrarlos ni nada de eso,  solo para que los últimos cambios de estos archivos no se envíen al último commit, a menos que cambiemos de opinión y los incluyamos de nuevo en staging con git add, por supuesto.
+
 # Git Checkout
 * Para ir al estado de un archivo de un `commit` en particular o un `branch` en particular.
 ```
